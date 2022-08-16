@@ -1,0 +1,29 @@
+.item-style{
+    border: 1px solid darkslategray;
+    width: 500px;
+    color: black;
+}
+
+.remove-button{
+    background-color: pink;
+    border: 2px solid grey;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.remove-button:hover{
+    background-color: greenyellow;
+    border: 2px solid black;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.transparent-input{
+    background-color: pink;
+    border: none;
+    margin-left: 1%;
+    margin-top: 3%;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
