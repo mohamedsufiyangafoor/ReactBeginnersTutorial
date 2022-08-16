@@ -4,12 +4,16 @@ import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+import { combineReducers, createStore,applyMiddleware,compose } from "redux";
 import reducer from "./BankRedux/store/reducer";
 import { Provider } from "react-redux";
+import loanReducer from "./BankRedux/store/loanReducer";
+import thunk from "redux-thunk";
 
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+const rootReducer = combineReducers({reducer,loanReducer})
+const reduxDevtools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const store = createStore(rootReducer,compose(applyMiddleware(thunk),reduxDevtools));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
