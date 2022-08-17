@@ -22,6 +22,7 @@ import { ContextFile } from "./context";
 import Balance from "./BankRedux/components/balance";
 import Deposit from "./BankRedux/components/deposit";
 import Withdraw from "./BankRedux/components/withdraw";
+import ReducerDemo from "./useReducerDemo/reducerDemo";
 
 export const Con = createContext(null);
 
@@ -62,7 +63,7 @@ export function App() {
               <Route path='balance' exact element={<Balance />} />
               <Route path='deposit' exact element={<Deposit />} />
               <Route path='withdraw' exact element={<Withdraw />} />
-              
+              <Route path="reducer" element={<ReducerDemo />} />
               <Route path="agecalculator" element={<AgeComponent />} />
 
               <Route path="hooks" element={<HooksEntry />}>
